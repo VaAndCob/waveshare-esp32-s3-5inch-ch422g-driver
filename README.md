@@ -75,7 +75,7 @@ A custom-designed 3D printable case is available for this board. This case provi
 
 1.  **Clone the Repository:**
     ```sh
-    git clone <your-repository-url>
+    git clone https://github.com/VaAndCob/waveshare-esp32-s3-5inch-ch422g-driver
     ```
 
 2.  **Install Libraries:**
@@ -83,9 +83,17 @@ A custom-designed 3D printable case is available for this board. This case provi
     *   Go to `Sketch` -> `Include Library` -> `Manage Libraries...`.
     *   Search for and install `LovyanGFX`.
 
+3.  **Configure LVGL:**
+    *   You must copy this `lv_conf.h` file and place it in your main Arduino `libraries` folder. It should sit alongside the `lvgl` library folder, not inside it. The path is typically `.../Arduino/Sketch/libraries/`.
+
 3.  **Configure Board:**
-    *   In the Arduino IDE, select a board definition for the ESP32-S3 (e.g., "ESP32-S3-Dev-Module").
-    *   Ensure you enable PSRAM if your board has it.
+    *  In the Arduino IDE, select a board definition for the ESP32-S3 (e.g., "ESP32-S3-Dev-Module").
+    * Hardware: ESP32-S3 based + SDReader + PSRAM + 5' TFT (1024x600) with Capacitive touch screen https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-5
+    * IDE: Arduino IDE 2.3.6
+    * ESP32 Core: 2.0.17
+    * PSRAM: OPI PSRAM
+    * Flash Szie: 16 MB
+    * Partition scheme: 16 MB (3MB) with SPIFFS
 
 4.  **Open and Upload:**
     *   Open the main sketch file: `sketch/Waveshare-ESP32-S3-Touch-5/Waveshare-ESP32-S3-Touch-5.ino`.
