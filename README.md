@@ -4,8 +4,7 @@ This repository contains a demonstration project for the [Waveshare 5" ESP32-S3 
 
 The primary goal of this project was to create a simple and reliable way to control the board's peripherals (Backlight, Digital I/O, SD Card) without relying on external libraries like `esp32_IO_expander`, which can be complex to integrate. This driver is written from scratch and uses the LovyanGFX I2C bus to ensure compatibility and prevent conflicts with the touch controller.
 
-!Project UI Screenshot
-*(Suggestion: Replace this placeholder with a screenshot or GIF of your project in action!)*
+![Project UI Screenshot](https://github.com/VaAndCob/waveshare-esp32-s3-5inch-ch422g-driver/blob/main/document/20251018_200916.jpg)
 
 ## The Problem
 
