@@ -1,0 +1,25 @@
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows thumbnail cache
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Arduino IDE temporary files
+*.ino.cpp
+
+# Build output
+/build/
+*.o
+*.a
+*.bin
+*.elf
+*.map
+
+# PlatformIO specific files
+.pio/
+.vscode/
+
