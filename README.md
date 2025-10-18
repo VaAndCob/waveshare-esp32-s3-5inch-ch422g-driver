@@ -59,7 +59,7 @@ The SD Card uses the following SPI pins, with the Chip Select being controlled v
 
 A custom-designed 3D printable case is available for this board. This case provides protection and a clean, finished look for your project.
 
-**[Download the 3D model from MakerWorld](https://makerworld.com/en/models/1879657-waveshare-esp32-s3-5-touchscreen-board-case#profileId-2012633)
+[Download the 3D model from MakerWorld](https://makerworld.com/en/models/1879657-waveshare-esp32-s3-5-touchscreen-board-case#profileId-2012633)
 
 
 ## Software & Libraries
