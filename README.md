@@ -4,10 +4,14 @@ This repository contains a demonstration project for the [Waveshare 5" ESP32-S3 
 
 The primary goal of this project was to create a simple and reliable way to control the board's peripherals (Backlight, Digital I/O, SD Card) without relying on external libraries like `esp32_IO_expander`, which can be complex to integrate. This driver is written from scratch and uses the LovyanGFX I2C bus to ensure compatibility and prevent conflicts with the touch controller.
 
-!Project UI Screenshot
+## Topics
+`esp32-s3` `waveshare` `ch422g` `lovyanGFX` `lvgl` `squareline-studio` `touch-screen` `custom-driver` `arduino`
+
+## Project UI Screenshot
+![Project UI Screenshot](https://github.com/VaAndCob/waveshare-esp32-s3-5inch-ch422g-driver/blob/main/document/20251018_200916.jpg)
+
 
 ## The Problem
-
 The Waveshare 5" board uses a CH422G chip to expand the I/O capabilities of the ESP32-S3. This expander controls crucial functions like the LCD backlight, digital inputs/outputs, and the SD card's chip select line. The main challenge is that both the CH422G and the capacitive touch controller (GT911) share the **same I2C bus**.
 
 Using separate libraries or the standard Arduino `Wire` library for the CH422G alongside LovyanGFX's touch driver can lead to I2C bus contention, race conditions, and unpredictable behavior. The system can become unstable as two different parts of the code try to manage the same hardware bus.
