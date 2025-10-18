@@ -55,6 +55,13 @@ The SD Card uses the following SPI pins, with the Chip Select being controlled v
 *   `CLK`:  GPIO 12
 *   `CS`:   GPIO 4 on CH422G (`EXIO4`)
 
+## 3D Printed Case
+
+A custom-designed 3D printable case is available for this board. This case provides protection and a clean, finished look for your project.
+
+**Download the 3D model from MakerWorld**
+
+
 ## Software & Libraries
 
 *   **Framework:** Arduino
