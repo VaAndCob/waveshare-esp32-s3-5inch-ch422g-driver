@@ -21,6 +21,7 @@ bit 0 ->  Control EXIO  1 = write , 0 = read
 #define CH422G_CONFIG_READ_ENABLE  0b00000010
 //-------------------------------------------------------
 // force initialize CH422G INPUT and OUTPUT
+/*
 void initCH422G() {
   Wire.begin(I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO);
 
@@ -52,6 +53,7 @@ void initCH422G() {
   Wire.end();
   delay(100);
 }
+*/
 
 //---------- Digital OUTPUT --------------------
 

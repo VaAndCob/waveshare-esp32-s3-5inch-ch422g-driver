@@ -851,7 +851,7 @@
               {
                 "nid": 1020,
                 "strtype": "TEXTAREA/Text",
-                "strval": "Waveshare ESP32-S3  Touch LCD 5\\\"",
+                "strval": "CH422G Driver Test\\n\\nWaveshare ESP32-S3  Touch LCD 5\\\"",
                 "InheritedType": 10
               },
               {

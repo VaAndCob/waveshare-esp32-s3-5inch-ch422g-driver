@@ -1,4 +1,4 @@
-//Waveshare ESP32-S3 5" Touch screen
+// Waveshare ESP32-S3 5" Touch screen
 //https://www.waveshare.com/wiki/ESP32-S3-Touch-LCD-5#Schematic_diagram
 //https://www.waveshare.com/esp32-s3-touch-lcd-5.htm?sku=28117
 
@@ -16,78 +16,6 @@
 #define TOUCH_INT 4
 #define TOUCH_RST -1
 
-/*CH422G Pin Map for Waveshare ESP32-S3 Touch 5"
-EXIO0 - DI0
-EXIO1 - TP_RST
-EXI02 - LCD_BL
-EXI03 - LCD_RESET
-EXIO4 - SD_CS
-EXIO5 - DI1
-EXIO6 - NOT USE
-EXIO7 - NOT USE
-OC0 - DO0
-OC1 - DO1 
-OC2 - NOT USE
-OC3 - NOT USE
-*/
-/*
-#define DI0 0 //digital input common ground OPEN-HIGH, CLOSE-LOW 
-#define TP_RST 1 //touch reset
-#define LCD_BL 2  //backlight
-#define LCD_RST 3 //reset lcd
-#define SD_CS 4   //sd select
-#define DI1 5  //digital input common ground OPEN-HIGH, CLOSE-LOW 
-
-#define DO0 0 //digital output -|LOAD|+ 5-36V|GND (LOW ON, HIGH OFF)
-#define DO1 1
-
-
-// CH422G I2C device addresses (сдвинутые!)
-#define CH422G_ADDR_WR_SET 0x24
-#define CH422G_ADDR_WR_IO 0x38
-#define CH422G_ADDR_RD_IO 0x26
-#define CH422G_ADDR_WR_OC 0x23
-
-
-inline void initCH422G() {
-  Wire.begin(I2C_MASTER_SDA_IO, I2C_MASTER_SCL_IO);
-  uint8_t data = 0x81;
-  Wire.beginTransmission(CH422G_ADDR_WR_SET);
-  Wire.write(data);
-  Wire.endTransmission();
-  uint8_t io_state = 0xFF;
-  Wire.beginTransmission(CH422G_ADDR_WR_IO);
-  Wire.write(io_state);
-  Wire.endTransmission();
-  delay(20);
-  Wire.end();
-  delay(100);
-}
-*/
-// ---------------------- Backlight via CH422G ----------------------
-/*
-class IoExpandedBacklight : public lgfx::ILight {
-public:
-  void config(lgfx::ITouch::config_t *cfg) {
-    if (cfg) {
-      _cfg = *cfg;
-    }
-  }
-
-  bool init(uint8_t brightness) override {
-
-    return true;
-  }
-
-  void setBrightness(uint8_t brightness) override {
-    uint8_t io_state = (brightness == 0) ? 0xFB : 0xFF;  // 0 -> (11111011) else (11111111)
-    lgfx::i2c::transactionWrite(_cfg.i2c_port, CH422G_ADDR_WR_IO, &io_state, 1, _cfg.freq);
-  }
-
-private:
-  lgfx::ITouch::config_t _cfg{};
-};
-*/
 // -------------------------------------------------------------------
 
 class LGFX : public lgfx::LGFX_Device {
@@ -189,13 +117,7 @@ public:
       _touch_instance.config(cfg);
       _panel_instance.setTouch(&_touch_instance);
     }
-/*
-    {
-      auto touch_cfg = _touch_instance.config();
-      _light_instance.config(&touch_cfg);
-      _panel_instance.setLight(&_light_instance);
-    }
-*/
+
     setPanel(&_panel_instance);
   }
 };
