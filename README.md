@@ -7,6 +7,7 @@ The primary goal of this project was to create a simple and reliable way to cont
 ## Topics
 `esp32-s3` `waveshare` `ch422g` `lovyanGFX` `lvgl` `squareline-studio` `touch-screen` `custom-driver` `arduino`
 
+## 🎞️[Youtube](https://youtu.be/34sBNREli5g)
 ## Project UI Screenshot
 ![Project UI Screenshot](https://github.com/VaAndCob/waveshare-esp32-s3-5inch-ch422g-driver/blob/main/document/20251018_200916.jpg)
 
