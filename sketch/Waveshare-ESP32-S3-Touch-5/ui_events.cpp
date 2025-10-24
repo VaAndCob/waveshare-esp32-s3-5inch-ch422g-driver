@@ -3,7 +3,7 @@
 // LVGL version: 8.3.11
 // Project name: OBD2_gauge_fusion
 #include "waveshare_ch422g.h"
-#include "waveshare_sd_card.h"
+#include "waveshare_sdcard.h"
 #include "ui.h"
 
 void DO0_OUTPUT(lv_event_t* e) {

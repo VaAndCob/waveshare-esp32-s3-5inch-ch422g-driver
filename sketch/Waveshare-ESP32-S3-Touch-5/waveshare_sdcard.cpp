@@ -18,7 +18,7 @@
  *    D1       - (Not connected)
  */
 
-#include "waveshare_sd_card.h"
+#include "waveshare_sdcard.h"
 
 
 void initSDCARD() {

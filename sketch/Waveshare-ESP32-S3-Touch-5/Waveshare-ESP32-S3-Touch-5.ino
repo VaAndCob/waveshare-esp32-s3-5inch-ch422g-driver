@@ -22,7 +22,7 @@
 #include "LGFX_Config_waveshare_5.h"
 LGFX lcd;
 #include "waveshare_ch422g.h"
-#include "waveshare_sd_card.h"
+#include "waveshare_sdcard.h"
 
 #include <lvgl.h>
 #include "ui.h"
